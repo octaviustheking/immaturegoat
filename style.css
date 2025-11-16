@@ -1,5 +1,38 @@
-body {
-    background-image: "images/background.jpg";
+#splash {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00ff00;
+    font-family: monospace;
+    transition: opacity 0.8s ease;
+}
+
+#splash.hidden {
+    opacity: 0;
+    pointer-events: none; /* ← THIS fixes links */
+}
+
+#terminal-text {
+    white-space: pre-line;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#start-msg {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+
+#main-content {
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .roboto-mono {
@@ -14,7 +47,10 @@ h1 {
 }
 
 .p-3 {
-    background-color: #234f75;
+    /* background-color: #234f75; */
+    background-image: url("images/Screenshot\ 2025-11-16\ at\ 11.00.05\ AM.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -83,29 +119,45 @@ h1 {
     width: 90%;               
     background-color: #1c3f5e;
     color: white;
-    border-radius: 20px;
-
+    border-radius: 25px;
     box-sizing: border-box;
-}
-
-.blockquote {
-    margin: 40px;
-    text-align: center;
-}
-
-.blockquote-footer {
-    padding-top: 15px;
 }
 
 .about-me ul {
     padding-left: 60px;
 }
 
+.blockquote {
+    margin: 40px auto;
+    text-align: center;
+    padding: 15px;
+    max-width: fit-content;
+    background-color: #1c3f5e;
+    border-radius: 25px;
+}
+
+.blockquote-footer {
+    padding-top: 15px;
+}
+
+.nothing {
+    margin: 100px auto 20px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: #1c3f5e;
+}
+
 @media (max-width: 600px) {
     .immaturegoat {
         display: none;
     }
+    .speech-bubble {
+        position: static;
+        margin: 100px auto 20px;   
+        display: block;
+        max-width: 90%;
+    }
     .about-me {
-        margin-top: 325px;
+        margin-top: 20px;  
     }
 }
