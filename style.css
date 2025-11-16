@@ -1,3 +1,6 @@
+body {
+    background-image: "images/background.jpg";
+}
 
 .roboto-mono {
   font-family: "Roboto Mono", monospace;
@@ -30,6 +33,7 @@ h1 {
 }
 
 .nav-item {
+    padding-left: 20px;
     padding-right: 20px;
 }
 
@@ -45,7 +49,7 @@ h1 {
 	position: absolute;
     margin-top: 100px;
     margin-left: 30px;
-	background: #00aabb;
+	background: #1c3f5e;
 	border-radius: 25px;
     display: inline-block;
     padding: 30px;
@@ -62,7 +66,7 @@ h1 {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-right-color: #00aabb;
+	border-right-color: #1c3f5e;
 	border-left: 0;
 	border-top: 0;
 	margin-top: -10px;
@@ -73,8 +77,35 @@ h1 {
     padding-left: 30px;
 }
 
+.about-me {
+    margin: 40px auto;
+    padding: 20px 25px;         
+    width: 90%;               
+    background-color: #1c3f5e;
+    color: white;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+}
+
+.blockquote {
+    margin: 40px;
+    text-align: center;
+}
+
+.blockquote-footer {
+    padding-top: 15px;
+}
+
+.about-me ul {
+    padding-left: 60px;
+}
+
 @media (max-width: 600px) {
     .immaturegoat {
         display: none;
+    }
+    .about-me {
+        margin-top: 325px;
     }
 }
