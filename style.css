@@ -147,6 +147,51 @@ h1 {
     background-color: #1c3f5e;
 }
 
+.contact-title {
+    text-align: center;
+    margin: 100px auto;
+    margin-bottom: 10px;
+    padding: 20px 25px;         
+    width: 90%;               
+    background-color: #1c3f5e;
+    color: white;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.contact-box {
+    flex: 1;
+    display: flex;
+    align-items: center;      /* vertically centers the icon with the text block */
+    gap: 20px;                /* space between icon and text */
+    background-color: #1c3f5e;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 auto;          
+    color: white;
+}
+
+.contact-box img {
+    height: 80px;
+    width: 80px;
+    filter: brightness(0) invert(1);
+}
+
+.contact-text {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;   /* stack Gmail + email */
+    align-items: flex-start;  /* left-align them */
+    overflow: auto;
+}
+
 @media (max-width: 600px) {
     .immaturegoat {
         display: none;
@@ -159,5 +204,11 @@ h1 {
     }
     .about-me {
         margin-top: 20px;  
+    }
+    .contact-container {
+        flex-direction: column; /* Stacks boxes vertically on small screens */
+      }
+    .contact-box {
+        width: 100%; /* Full width for stacked boxes */
     }
 }
