@@ -14,7 +14,7 @@
 
 #splash.hidden {
     opacity: 0;
-    pointer-events: none; /* ← THIS fixes links */
+    pointer-events: none;
 }
 
 #terminal-text {
@@ -169,8 +169,8 @@ h1 {
 .contact-box {
     flex: 1;
     display: flex;
-    align-items: center;      /* vertically centers the icon with the text block */
-    gap: 20px;                /* space between icon and text */
+    align-items: center;     
+    gap: 20px;                
     background-color: #1c3f5e;
     padding: 20px;
     border-radius: 25px;
@@ -187,8 +187,8 @@ h1 {
 .contact-text {
     padding-top: 15px;
     display: flex;
-    flex-direction: column;   /* stack Gmail + email */
-    align-items: flex-start;  /* left-align them */
+    flex-direction: column;  
+    align-items: flex-start; 
     overflow: auto;
 }
 
@@ -206,9 +206,9 @@ h1 {
         margin-top: 20px;  
     }
     .contact-container {
-        flex-direction: column; /* Stacks boxes vertically on small screens */
-      }
+        flex-direction: column; 
+    }
     .contact-box {
-        width: 100%; /* Full width for stacked boxes */
+        width: 100%;
     }
 }
