@@ -58,7 +58,7 @@ h1 {
 .navbar {
     border-radius: 25px;
     margin: 20px;
-    background-color: #163047;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 25%);
 }
 
 .navbar-toggler {
@@ -159,7 +159,7 @@ h1 {
 	position: absolute;
     margin-top: 100px;
     margin-left: 30px;
-	background: #1c3f5e;
+	background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
 	border-radius: 25px;
     display: inline-block;
     padding: 30px;
@@ -176,7 +176,7 @@ h1 {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-right-color: #1c3f5e;
+	background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
 	border-left: 0;
 	border-top: 0;
 	margin-top: -10px;
@@ -210,7 +210,7 @@ h1 {
 .about-me {
     margin: 20px;
     padding: 20px 25px;
-    background-color: #1c3f5e;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
     color: white;
     border-radius: 25px;
     width: 800px;
@@ -231,7 +231,7 @@ h1 {
     text-align: center;
     padding: 15px;
     width: fit-content;
-    background-color: #1c3f5e;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
     border-radius: 25px;
     max-width: 90%
 }
@@ -251,7 +251,7 @@ h1 {
     margin: 100px auto 20px;
     padding: 15px;
     border-radius: 25px;
-    background-color: #1c3f5e;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
 }
 
 .contact-title {
@@ -260,7 +260,7 @@ h1 {
     margin-bottom: 10px;
     padding: 20px 25px;         
     width: 90%;               
-    background-color: #1c3f5e;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
     color: white;
     border-radius: 25px;
     box-sizing: border-box;
@@ -278,7 +278,7 @@ h1 {
     display: flex;
     align-items: center;     
     gap: 20px;                
-    background-color: #1c3f5e;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
     padding: 20px;
     border-radius: 25px;
     margin: 0 auto;          
@@ -316,6 +316,92 @@ h1 {
     outline: 2px solid #dce7ff; 
     outline-offset: 4px;             
     transform: translateY(-4px);   
+}
+
+.link-cards-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.link-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(-45deg, #3ea6b8 0%, #1c3f5e 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    margin: 20px;
+}
+
+.link-card img {
+  width: 150px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.link-card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.link-card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.link-card__content a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.link-card__content a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.link-card:hover .link-card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.link-card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.link-card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.link-card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
 }
 
 @media (max-width: 600px) {
